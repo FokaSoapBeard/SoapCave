@@ -250,7 +250,7 @@ url_encode() {
 }
 
 # 1️⃣ Reality TCP (порт 443, Vision)
-R_LINK="vless://${R_UUID}@94.183.191.17:${PORT}?security=reality&pbk=$(url_encode "$R_PUB")&sid=${R_SHORT}&sni=www.microsoft.com&fp=chrome&type=tcp&flow=xtls-rprx-vision#Reality-TCP"
+R_LINK="vless://${R_UUID}@${DOMAIN}:${PORT}?security=reality&pbk=$(url_encode "$R_PUB")&sid=${R_SHORT}&sni=www.microsoft.com&fp=chrome&type=tcp&flow=xtls-rprx-vision#Reality-TCP"
 
 # 2️⃣ XHTTP + Reality (порт 8445)
 X_LINK="vless://${X_UUID}@${DOMAIN}:8445?security=reality&pbk=$(url_encode "$X_PUB")&sid=${X_SHORT}&sni=www.microsoft.com&fp=chrome&type=xhttp&path=%2F${X_PASS}&mode=stream-one#XHTTP-Reality"
